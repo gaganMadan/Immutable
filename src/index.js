@@ -14,3 +14,11 @@ const list3 = list2.push(5);
 console.log(list1);
 console.log(list3);
 console.log(list2);
+
+const { Seq } = require("immutable");
+const myObject = { a: 1, b: 2, c: 3 };
+console.log(
+  Seq(myObject)
+    .map((x) => x * x)
+    .toObject()
+);
